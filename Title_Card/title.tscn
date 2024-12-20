@@ -28,70 +28,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
 
-[node name="Resolutions" type="Panel" parent="CanvasLayer/HBoxContainer/Buttons"]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer/Buttons/Resolutions"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 23.0
-grow_horizontal = 2
-text = "Resolutions"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/HBoxContainer/Buttons/Resolutions"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 15
-alignment = 1
-
-[node name="2560 x 1440" type="Button" parent="CanvasLayer/HBoxContainer/Buttons/Resolutions/VBoxContainer"]
-custom_minimum_size = Vector2(250, 25)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "2560 x 1440"
-
-[node name="1920 x 1080" type="Button" parent="CanvasLayer/HBoxContainer/Buttons/Resolutions/VBoxContainer"]
-custom_minimum_size = Vector2(250, 25)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "1920 x 1080"
-
-[node name="1440 x 900" type="Button" parent="CanvasLayer/HBoxContainer/Buttons/Resolutions/VBoxContainer"]
-custom_minimum_size = Vector2(250, 25)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "1440 x 900"
-
-[node name="1366 x 768" type="Button" parent="CanvasLayer/HBoxContainer/Buttons/Resolutions/VBoxContainer"]
-custom_minimum_size = Vector2(250, 25)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "1366 x 768"
-
-[node name="1280 x 720" type="Button" parent="CanvasLayer/HBoxContainer/Buttons/Resolutions/VBoxContainer"]
-custom_minimum_size = Vector2(250, 25)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "1280 x 720"
-
 [node name="Butttons_Container" type="VBoxContainer" parent="CanvasLayer/HBoxContainer/Buttons"]
 layout_mode = 1
 anchors_preset = 8
@@ -173,9 +109,3 @@ theme_override_font_sizes/font_size = 25
 text = "Graphic Example"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/Buttons/Resolutions/VBoxContainer/2560 x 1440" to="." method="_on__x_1440_pressed"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/Buttons/Resolutions/VBoxContainer/1920 x 1080" to="." method="_on__x_1080_pressed"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/Buttons/Resolutions/VBoxContainer/1440 x 900" to="." method="_on__x_900_pressed"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/Buttons/Resolutions/VBoxContainer/1366 x 768" to="." method="_on__x_768_pressed"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/Buttons/Resolutions/VBoxContainer/1280 x 720" to="." method="_on__x_720_pressed"]
