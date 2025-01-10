@@ -5,6 +5,7 @@ var new_music: AudioStreamMP3
 var new_volume: int
 
 @onready var fade_timer = $FadeTimer
+@onready var music_man = $MusicManager
 
 var global_volume = 0 
 var dampener = -25
