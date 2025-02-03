@@ -1,5 +1,8 @@
 extends Node
 
+##TODO Erase these comments when you're done setting up the audio manager
+##TODO Add AudioManager as an autoload with a short name like AMGR that is easy to write
+##TODO Add the audio_manager_bus.tres to the project
 var current_music: AudioStreamMP3
 var new_music: AudioStreamMP3
 var new_volume: int
@@ -96,14 +99,14 @@ func stop_looped():
 	if has_looped_sfx:
 		has_looped_sfx.queue_free()
 
-#ALERT When using this in a new project, hook up the signals again
+##ALERT When using this in a new project, hook up the signals again
 func _on_fade_timer_timeout():
 	music_manager.stream = new_music
 	music_manager.volume_db = new_volume
 	music_manager.play()
 	current_music = new_music
 
-#ALERT When using this in a new project, hook up the signals again
+##ALERT When using this in a new project, hook up the signals again
 func _on_music_manager_finished():
 	if loop_music == false:
 		current_music = null
