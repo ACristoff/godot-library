@@ -20,6 +20,10 @@ func _process(delta):
 func switch_songs():
 	fade_timer.start()
 
+#Music bus
+#Plays an mp3 file
+#takes an argument of volume (which is then affected by bus volume)
+#takes a looped argument defaults to true
 func play_music(music: AudioStreamMP3, volume = 0.0, looped = true):
 	#music_manager.playing = true
 	if current_music:
@@ -35,6 +39,12 @@ func play_music(music: AudioStreamMP3, volume = 0.0, looped = true):
 	music_manager.play()
 	#return music_manager
 
+#SFX Bus
+#Plays an mp3 file
+#takes an argument of volume (which is then affected by bus volume)
+#takes a looped argument defaults to false
+#Returns the player
+#ALERT Is not 2d
 func play_sfx(new_stream: AudioStreamMP3, volume = 0.0, looped = false):
 	var fx_player: AudioStreamPlayer = AudioStreamPlayer.new()
 	new_stream.set_loop(looped)
@@ -50,7 +60,12 @@ func play_sfx(new_stream: AudioStreamMP3, volume = 0.0, looped = false):
 		has_looped_sfx = fx_player
 	return fx_player
 
-func create_2d_sfx(new_stream: AudioStreamWAV, volume = 0.0, looped = false):
+#SFX Bus
+#Plays an mp3 file
+#takes an argument of volume (which is then affected by bus volume)
+#takes a looped argument defaults to true
+#Returns the 2d player so you can use the 2d features
+func create_2d_sfx(new_stream: AudioStreamMP3, volume = 0.0, looped = false):
 	var fx_player: AudioStreamPlayer2D = AudioStreamPlayer2D.new()
 	new_stream.set_loop(looped)
 	fx_player.stream = new_stream
@@ -65,6 +80,12 @@ func create_2d_sfx(new_stream: AudioStreamWAV, volume = 0.0, looped = false):
 		has_looped_sfx = fx_player
 	return fx_player
 
+#SFX Bus
+#Plays a WAV file
+#takes an argument of volume (which is then affected by bus volume)
+#takes a looped argument defaults to false
+#Returns the player
+#ALERT Is not 2d
 func play_sfx_wav(new_stream: AudioStreamWAV, volume = 0.0, looped = false):
 	var fx_player: AudioStreamPlayer = AudioStreamPlayer.new()
 	#new_stream.set_loop(looped)
@@ -80,6 +101,12 @@ func play_sfx_wav(new_stream: AudioStreamWAV, volume = 0.0, looped = false):
 		has_looped_sfx = fx_player
 	return fx_player
 
+#Voice Bus
+#Plays an mp3 file
+#takes an argument of volume (which is then affected by bus volume)
+#takes a looped argument defaults to false
+#Returns the player
+#ALERT Is not 2d
 func play_quip(new_stream: AudioStreamMP3, volume = 0.0):
 	var fx_player: AudioStreamPlayer = AudioStreamPlayer.new()
 	fx_player.stream = new_stream
@@ -99,14 +126,16 @@ func stop_looped():
 	if has_looped_sfx:
 		has_looped_sfx.queue_free()
 
-##ALERT When using this in a new project, hook up the signals again
+#ALERT When using this in a new project, hook up the signals again
+#Manages the audio fading for music transitions, this could be better
 func _on_fade_timer_timeout():
 	music_manager.stream = new_music
 	music_manager.volume_db = new_volume
 	music_manager.play()
 	current_music = new_music
 
-##ALERT When using this in a new project, hook up the signals again
+#ALERT When using this in a new project, hook up the signals again
+#Stops music if it's not meant to loop
 func _on_music_manager_finished():
 	if loop_music == false:
 		current_music = null
