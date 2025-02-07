@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://r01n6g46e84a"]
 
-[ext_resource type="Script" path="res://Game/Data/Game_Manager/game_manager.gd" id="1_uo502"]
+[ext_resource type="Script" path="res://Game/Lib/Game_Manager/game_manager.gd" id="1_uo502"]
 [ext_resource type="PackedScene" uid="uid://5ooenep8ptyj" path="res://Game/UI/Splash_Screen/splash_screen.tscn" id="2_ymkn1"]
 
 [node name="GameManager" type="Node"]
