@@ -11,4 +11,7 @@ script = ExtResource("1_uo502")
 process_mode = 3
 layer = 99
 
-[node name="Splash" parent="MenuUI" instance=ExtResource("2_ymkn1")]
+[node name="Transitions" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="Splash" parent="Transitions" instance=ExtResource("2_ymkn1")]

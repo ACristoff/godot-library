@@ -14,6 +14,7 @@ extends Node
 @onready var menu_ui: CanvasLayer = $MenuUI
 
 @onready var main_menu = preload("res://Game/UI/Main_Menu/main_menu.tscn")
+@onready var current_menu = $Transitions/Splash
 
 #Dictionary that holds all the relevant menus we will be switching through
 @onready var Menu_Scenes: Dictionary = {
@@ -28,3 +29,6 @@ func _ready() -> void:
 
 func change_scene(new_state: String):
 	print('scene changed', Menu_Scenes[new_state])
+	var new_scene = Menu_Scenes[new_state].instantiate()
+	menu_ui.add_child(new_scene)
+	#print(new_scene)
