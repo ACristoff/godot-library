@@ -6,4 +6,7 @@
 [node name="GameManager" type="Node"]
 script = ExtResource("1_uo502")
 
-[node name="Splash" parent="." instance=ExtResource("2_ymkn1")]
+[node name="MenuUI" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="Splash" parent="MenuUI" instance=ExtResource("2_ymkn1")]
