@@ -7,6 +7,7 @@ Reusable components for godot projects @ Beret Parade
 ### Sound Menu
 ### Resolutions
 ### Graphics Quality
+## Sound Manager
 ## Title Screen
 ## Credits
 ## Particles System
