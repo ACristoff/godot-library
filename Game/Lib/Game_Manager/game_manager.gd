@@ -6,28 +6,25 @@ extends Node
 ##Nodes get switched out as children of this node and this is where game-wide data is stored
 ##By default, you'd put the node configuration of what is meant to run on launch and have things loop back to main menu
 
-#Where all menu UIs are rendered
-#Set to run while paused
-@onready var menu_ui = $MenuUI
 #Activates or deactivates the debug mode
 @export var debug_mode: bool = false
 
+#Where all menu UIs are rendered
+#Set to run while paused
+@onready var menu_ui: CanvasLayer = $MenuUI
 
+@onready var main_menu = preload("res://Game/UI/Main_Menu/main_menu.tscn")
 
-var Menu_Scenes = {
-	"Main": 'test deez'
+#Dictionary that holds all the relevant menus we will be switching through
+@onready var Menu_Scenes: Dictionary = {
+	"Main": main_menu,
+	"Settings": 'NOT DONE YET BOZO',
+	"Pause": 'NOT DONE YET BOZO'
 }
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	SignalBus.game_state_changed.connect(change_scene.bind())
 
-func change_scene(new_state):
+func change_scene(new_state: String):
 	print('scene changed', Menu_Scenes[new_state])
-	
-	pass
-
-## Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-	#pass

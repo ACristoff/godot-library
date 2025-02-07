@@ -11,7 +11,7 @@ var new_volume: int
 @onready var music_manager: AudioStreamPlayer = $MusicManager
 
 var has_looped_sfx
-var loop_music = true
+var loop_music: bool = true
 
 func _process(delta):
 	if new_music && !fade_timer.is_stopped():
