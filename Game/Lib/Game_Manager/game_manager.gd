@@ -14,13 +14,18 @@ extends Node
 
 
 
+var Menu_Scenes = {
+	"Main": 'test deez'
+}
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	SignalBus.game_state_changed.connect(change_scene.bind())
 
 func change_scene(new_state):
-	print('scene changed', new_state)
+	print('scene changed', Menu_Scenes[new_state])
+	
 	pass
 
 ## Called every frame. 'delta' is the elapsed time since the previous frame.

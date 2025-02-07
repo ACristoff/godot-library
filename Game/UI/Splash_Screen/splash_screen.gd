@@ -22,6 +22,9 @@ func _play_beretchan_sfx():
 	#var game_man: game_manager = get_tree().get_first_node_in_group('game')
 	#game_man.main_menu(true)
 
+func call_menu():
+	SignalBus.game_state_changed.emit("Main")
+
 func _on_splash_anim_animation_finished(anim_name):
 	if anim_name == 'splash':
 		#var game_man: game_manager = get_tree().get_first_node_in_group('game')
