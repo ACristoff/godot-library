@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bo8235t87pkb1"]
 
-[ext_resource type="Script" path="res://Title_Card/title_control.gd" id="1_epqi3"]
+[ext_resource type="Script" path="res://Game/UI/Title_Card/title_control.gd" id="1_epqi3"]
 
 [node name="Control" type="Control"]
 layout_mode = 3

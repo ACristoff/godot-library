@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1namh52upem6"
-path="res://.godot/imported/Tab_Selected.png-9ecc911a0db2bf20a9247083edb30495.ctex"
+uid="uid://by7s74e3tthk5"
+path="res://.godot/imported/Tab.png-3a36f2d2a6663cfe4f9422da86f6c1c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Settings_Panel/Default_Assets/Tab_Selected.png"
-dest_files=["res://.godot/imported/Tab_Selected.png-9ecc911a0db2bf20a9247083edb30495.ctex"]
+source_file="res://Game/UI/Settings_Panel/Default_Assets/Tab.png"
+dest_files=["res://.godot/imported/Tab.png-3a36f2d2a6663cfe4f9422da86f6c1c2.ctex"]
 
 [params]
 

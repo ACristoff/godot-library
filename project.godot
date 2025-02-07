@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="godot-library"
+run/main_scene="res://Game/Data/Game_Manager/game_manager.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+AudMan="*res://Game/Data/Audio_Manager/audio_manager.tscn"
 
 [display]
 

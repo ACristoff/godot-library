@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://usfpukmy2seu"]
 
-[ext_resource type="Script" path="res://Settings_Panel/settings_panel.gd" id="1_w6ij1"]
-[ext_resource type="Texture2D" uid="uid://1namh52upem6" path="res://Settings_Panel/Default_Assets/Tab_Selected.png" id="2_6rm7t"]
-[ext_resource type="Texture2D" uid="uid://by7s74e3tthk5" path="res://Settings_Panel/Default_Assets/Tab.png" id="2_21u76"]
+[ext_resource type="Script" path="res://Game/UI/Settings_Panel/settings_panel.gd" id="1_w6ij1"]
+[ext_resource type="Texture2D" uid="uid://1namh52upem6" path="res://Game/UI/Settings_Panel/Default_Assets/Tab_Selected.png" id="2_6rm7t"]
+[ext_resource type="Texture2D" uid="uid://by7s74e3tthk5" path="res://Game/UI/Settings_Panel/Default_Assets/Tab.png" id="2_21u76"]
 
 [node name="Settings_Panel" type="Control"]
 process_mode = 2
