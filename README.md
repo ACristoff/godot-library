@@ -2,6 +2,13 @@
 
 Reusable components for godot projects @ Beret Parade
 
+#Instructions:
+	Hook up audio manager, follow audiomanager.gd instructions
+	Add as Global/Autoload:
+		AudioManager
+		SignalBus
+
+
 # TODO
 ## Settings
 ### Sound Menu

@@ -6,6 +6,9 @@ extends Node
 ##Nodes get switched out as children of this node and this is where game-wide data is stored
 ##By default, you'd put the node configuration of what is meant to run on launch and have things loop back to main menu
 
+#Where all menu UIs are rendered
+#Set to run while paused
+@onready var menu_ui = $MenuUI
 #Activates or deactivates the debug mode
 @export var debug_mode: bool = false
 
