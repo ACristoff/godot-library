@@ -1,4 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://5ooenep8ptyj"]
+[gd_scene load_steps=5 format=3 uid="uid://5ooenep8ptyj"]
+
+[ext_resource type="Script" path="res://Game/UI/Splash_Screen/splash_screen.gd" id="1_iuf1u"]
+[ext_resource type="Texture2D" uid="uid://4l77kmnuwv8g" path="res://Assets/UI/Splash/beretparadelogo.png" id="2_33wos"]
 
 [sub_resource type="Animation" id="Animation_5pocb"]
 resource_name = "splash"
@@ -82,6 +85,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_iuf1u")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -109,6 +113,7 @@ grow_vertical = 2
 scale = Vector2(0.25, 0.25)
 pivot_offset = Vector2(960, 540)
 mouse_filter = 0
+texture = ExtResource("2_33wos")
 
 [node name="Splash_Anim" type="AnimationPlayer" parent="."]
 libraries = {
