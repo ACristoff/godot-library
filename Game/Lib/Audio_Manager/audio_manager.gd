@@ -24,7 +24,7 @@ func switch_songs():
 #Plays an mp3 file
 #takes an argument of volume (which is then affected by bus volume)
 #takes a looped argument defaults to true
-func play_music(music: AudioStreamMP3, volume = 0.0, looped = true):
+func play_music(music: AudioStreamMP3, volume = 0, looped = true):
 	#music_manager.playing = true
 	if current_music:
 		new_music = music

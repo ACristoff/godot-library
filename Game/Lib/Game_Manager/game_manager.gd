@@ -17,9 +17,12 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	SignalBus.game_state_changed.connect(change_scene.bind())
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func change_scene(new_state):
+	print('scene changed', new_state)
 	pass
+
+## Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta: float) -> void:
+	#pass
