@@ -28,7 +28,8 @@ func _ready() -> void:
 	SignalBus.game_state_changed.connect(change_scene.bind())
 
 func change_scene(new_state: String):
-	print('scene changed', Menu_Scenes[new_state])
+	if debug_mode:
+		print('scene changed', Menu_Scenes[new_state])
 	var new_scene = Menu_Scenes[new_state].instantiate()
 	menu_ui.add_child(new_scene)
-	#print(new_scene)
+	
