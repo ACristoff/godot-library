@@ -10,7 +10,7 @@ extends Node
 @export var debug_mode: bool = false
 
 #Where all menu UIs are rendered
-#Set to run while paused
+#Set to run always
 @onready var menu_ui: CanvasLayer = $MenuUI
 
 @onready var main_menu = preload("res://Game/UI/Main_Menu/main_menu.tscn")
