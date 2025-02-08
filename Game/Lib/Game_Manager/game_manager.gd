@@ -19,9 +19,11 @@ extends Node
 #Dictionary that holds all the relevant menus we will be switching through
 @onready var Menu_Scenes: Dictionary = {
 	"Main": main_menu,
+	"Start": 'NOT DONE YET BOZO',
 	"Settings": 'NOT DONE YET BOZO',
 	"Credits": 'NOT DONE YET BOZO',
-	"Pause": 'NOT DONE YET BOZO'
+	"Pause": 'NOT DONE YET BOZO',
+	"Quit": 'NOT DONE YET BOZO'
 }
 
 # Called when the node enters the scene tree for the first time.
@@ -29,8 +31,8 @@ func _ready() -> void:
 	SignalBus.game_state_changed.connect(change_scene.bind())
 
 func change_scene(new_state: String):
-	if debug_mode:
-		print('scene changed', new_state, Menu_Scenes[new_state])
+	if debug_mode == true:
+		prints('scene changed', new_state, Menu_Scenes[new_state])
 	if Menu_Scenes[new_state] is not String:
 		var new_scene = Menu_Scenes[new_state].instantiate()
 		menu_ui.add_child(new_scene)

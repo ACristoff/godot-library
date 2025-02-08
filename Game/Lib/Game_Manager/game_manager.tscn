@@ -6,6 +6,7 @@
 [node name="GameManager" type="Node"]
 process_mode = 3
 script = ExtResource("1_uo502")
+debug_mode = true
 
 [node name="MenuUI" type="CanvasLayer" parent="."]
 process_mode = 3
