@@ -14,6 +14,10 @@ extends Node
 @onready var menu_ui: CanvasLayer = $MenuUI
 
 @onready var main_menu = preload("res://Game/UI/Main_Menu/main_menu.tscn")
+@onready var settings_menu
+@onready var credits_menu
+@onready var game
+
 @onready var current_menu = $Transitions/Splash
 
 #Dictionary that holds all the relevant menus we will be switching through
