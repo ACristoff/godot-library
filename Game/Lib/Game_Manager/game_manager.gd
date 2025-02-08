@@ -20,6 +20,7 @@ extends Node
 @onready var Menu_Scenes: Dictionary = {
 	"Main": main_menu,
 	"Settings": 'NOT DONE YET BOZO',
+	"Credits": 'NOT DONE YET BOZO',
 	"Pause": 'NOT DONE YET BOZO'
 }
 
@@ -29,7 +30,8 @@ func _ready() -> void:
 
 func change_scene(new_state: String):
 	if debug_mode:
-		print('scene changed', Menu_Scenes[new_state])
-	var new_scene = Menu_Scenes[new_state].instantiate()
-	menu_ui.add_child(new_scene)
+		print('scene changed', new_state, Menu_Scenes[new_state])
+	if Menu_Scenes[new_state] is not String:
+		var new_scene = Menu_Scenes[new_state].instantiate()
+		menu_ui.add_child(new_scene)
 	

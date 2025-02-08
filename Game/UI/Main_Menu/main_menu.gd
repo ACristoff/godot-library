@@ -2,16 +2,13 @@ extends Control
 
 
 func _on_start_pressed():
-	pass # Replace with function body.
-
+	SignalBus.game_state_changed.emit("Start")
 
 func _on_settings_pressed():
-	pass # Replace with function body.
-
+	SignalBus.game_state_changed.emit("Settings")
 
 func _on_credits_pressed():
-	pass # Replace with function body.
-
+	SignalBus.game_state_changed.emit("Credits")
 
 func _on_quit_pressed():
-	pass # Replace with function body.
+	SignalBus.game_state_changed.emit("Quit")
