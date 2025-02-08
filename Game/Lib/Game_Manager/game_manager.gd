@@ -23,7 +23,7 @@ extends Node
 	"Settings": 'NOT DONE YET BOZO',
 	"Credits": 'NOT DONE YET BOZO',
 	"Pause": 'NOT DONE YET BOZO',
-	"Quit": 'NOT DONE YET BOZO'
+	"Quit": 'Quit za gameo'
 }
 
 # Called when the node enters the scene tree for the first time.
