@@ -1,5 +1,7 @@
 extends Node
 
+class_name Game_Manager
+
 ##TODO Erase these comments when you're done setting up the audio manager
 ##Game Manager:
 ##This node is not necessarily meant to be an autoload, but rather sit at the top of the node hierarchy
