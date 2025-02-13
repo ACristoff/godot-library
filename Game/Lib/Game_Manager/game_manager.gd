@@ -39,11 +39,10 @@ func _ready() -> void:
 
 func change_scene(new_state: String):
 	if debug_mode == true:
-		prints('scene changed', new_state, Menu_Scenes[new_state])
+		prints('menu scene changed', new_state, Menu_Scenes[new_state])
 	if new_state == "Quit":
 		get_tree().quit()
 	if Menu_Scenes[new_state] is PackedScene:
 		var new_scene = Menu_Scenes[new_state].instantiate()
 		menu_ui.add_child(new_scene)
 		current_menu = new_scene
-	
