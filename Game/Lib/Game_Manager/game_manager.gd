@@ -25,10 +25,10 @@ class_name Game_Manager
 #Dictionary that holds all the relevant menus we will be switching through
 @onready var Menu_Scenes: Dictionary = {
 	"Main": main_menu,
-	"Start": 'NOT DONE YET BOZO',
-	"Settings": 'NOT DONE YET BOZO',
-	"Credits": 'NOT DONE YET BOZO',
-	"Pause": 'NOT DONE YET BOZO',
+	"Start": 'PUT THE GAME OR LEVEL MANAGER IN HERE',
+	"Settings": 'SETTINGS MENU HERE',
+	"Credits": 'CREDITS SCREEN HERE',
+	"Pause": 'PAUSE SCREEN HERE',
 	"Quit": 'Quit za gameo'
 }
 
