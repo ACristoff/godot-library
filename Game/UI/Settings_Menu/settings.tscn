@@ -17,4 +17,56 @@ offset_right = 8.0
 offset_bottom = 8.0
 text = "Back to main"
 
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -75.0
+offset_bottom = 71.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "SETTINGS
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxSoundLabels" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="MasterLabel" type="Label" parent="Control/VBoxContainer/HBoxContainer/VBoxSoundLabels"]
+layout_mode = 2
+text = "MASTER
+"
+
+[node name="MusicLabel" type="Label" parent="Control/VBoxContainer/HBoxContainer/VBoxSoundLabels"]
+layout_mode = 2
+text = "MUSIC
+"
+
+[node name="VoiceLabel" type="Label" parent="Control/VBoxContainer/HBoxContainer/VBoxSoundLabels"]
+layout_mode = 2
+text = "VOICE"
+
+[node name="SFXLabel" type="Label" parent="Control/VBoxContainer/HBoxContainer/VBoxSoundLabels"]
+layout_mode = 2
+text = "SFX
+"
+
+[node name="VBoxSoundSliders" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Control/VBoxContainer/HBoxContainer/VBoxSoundSliders"]
+layout_mode = 2
+
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
