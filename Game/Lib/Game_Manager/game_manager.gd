@@ -17,7 +17,7 @@ class_name Game_Manager
 
 @onready var main_menu = preload("res://Game/UI/Main_Menu/main_menu.tscn")
 @onready var settings_menu = preload("res://Game/UI/Settings_Menu/settings.tscn")
-@onready var credits_menu
+@onready var credits_menu = preload("res://Game/UI/Credits_Menu/credits_menu.tscn")
 @onready var game
 
 @export var current_menu: Control
@@ -27,9 +27,9 @@ class_name Game_Manager
 	"Main": main_menu,
 	"Start": 'PUT THE GAME OR LEVEL MANAGER IN HERE',
 	"Settings": settings_menu,
-	"Credits": 'CREDITS SCREEN HERE',
+	"Credits": credits_menu,
 	"Pause": 'PAUSE SCREEN HERE',
-	"Quit": 'Quit za gameo'
+	"Quit": 'later dude'
 }
 
 # Called when the node enters the scene tree for the first time.

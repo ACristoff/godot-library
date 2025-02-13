@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dmjjd5ccm0se5"]
+[gd_scene load_steps=2 format=3 uid="uid://dmjjd5ccm0se5"]
+
+[ext_resource type="Script" path="res://Game/UI/Credits_Menu/credits_menu.gd" id="1_h4rqf"]
 
 [node name="CreditsMenu" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_h4rqf")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -35,8 +38,10 @@ Alex Cristoffanini / DiFigurati: Programming
 Tealy_Man: Sound"
 fit_content = true
 
-[node name="Back" type="Button" parent="."]
+[node name="BackButton" type="Button" parent="."]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 text = "Back to main"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
