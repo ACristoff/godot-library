@@ -20,7 +20,7 @@ class_name Game_Manager
 @onready var credits_menu
 @onready var game
 
-@onready var current_menu = $Transitions/Splash
+@export var current_menu: Control
 
 #Dictionary that holds all the relevant menus we will be switching through
 @onready var Menu_Scenes: Dictionary = {
