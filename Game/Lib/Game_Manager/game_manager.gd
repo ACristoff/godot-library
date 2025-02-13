@@ -16,7 +16,7 @@ class_name Game_Manager
 @onready var menu_ui: CanvasLayer = $MenuUI
 
 @onready var main_menu = preload("res://Game/UI/Main_Menu/main_menu.tscn")
-@onready var settings_menu
+@onready var settings_menu = preload("res://Game/UI/Settings_Menu/settings.tscn")
 @onready var credits_menu
 @onready var game
 
@@ -26,7 +26,7 @@ class_name Game_Manager
 @onready var Menu_Scenes: Dictionary = {
 	"Main": main_menu,
 	"Start": 'PUT THE GAME OR LEVEL MANAGER IN HERE',
-	"Settings": 'SETTINGS MENU HERE',
+	"Settings": settings_menu,
 	"Credits": 'CREDITS SCREEN HERE',
 	"Pause": 'PAUSE SCREEN HERE',
 	"Quit": 'Quit za gameo'
