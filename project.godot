@@ -11,25 +11,19 @@ config_version=5
 [application]
 
 config/name="godot-library"
-run/main_scene="res://Game/Lib/Game_Manager/game_manager.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+run/main_scene="uid://dpd3hr3oj8eku"
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [audio]
 
-buses/default_bus_layout="res://Game/Lib/Audio_Manager/audio_manager_bus.tres"
+buses/default_bus_layout="uid://cawkt7i7o0qp2"
 
 [autoload]
 
-AudMan="*res://Game/Lib/Audio_Manager/audio_manager.tscn"
-SignalBus="*res://Game/Lib/SignalBus/signal_bus.gd"
+SignalBus="*res://Lib/SignalBus/signal_bus.tscn"
+AudMan="*res://Lib/Audio_Manager/audio_manager.tscn"
 
 [debug]
 
 gdscript/warnings/unused_signal=0
-
-[display]
-
-window/size/viewport_width=1280
-window/size/viewport_height=720
-window/stretch/mode="canvas_items"
