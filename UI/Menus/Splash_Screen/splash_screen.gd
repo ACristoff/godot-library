@@ -15,7 +15,6 @@ extends Control
 
 func _play_splash_sfx():
 	AudMan.play_sfx(drumsfx)
-	pass
 
 func _play_beretchan_sfx():
 	var _random = randi_range(0,bereparedosfx.size() - 1)
