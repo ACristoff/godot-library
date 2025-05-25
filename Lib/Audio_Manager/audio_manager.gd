@@ -14,20 +14,26 @@ func _process(delta):
 	if new_music && !fade_timer.is_stopped():
 		music_manager.volume_db = music_manager.volume_db - (30 * delta)
 
-
-func switch_songs():
-	fade_timer.start()
+func switch_songs(fade = true):
+	if fade:
+		fade_timer.start()
+	else:
+		music_manager.stream = new_music
+		music_manager.volume_db = new_volume
+		music_manager.play()
+		current_music = new_music
 
 #Music bus
 #Plays an mp3 file
 #takes an argument of volume (which is then affected by bus volume)
 #takes a looped argument defaults to true
-func play_music(music: AudioStreamMP3, volume = 0, looped = true) -> AudioStreamPlayer:
+#takes a fade argument defaults to true
+func play_music(music: AudioStreamMP3, volume = 0, looped = true, fade = true) -> AudioStreamPlayer:
 	#music_manager.playing = true
 	if current_music:
 		new_music = music
 		new_volume = volume
-		switch_songs()
+		switch_songs(fade)
 		return
 	loop_music = looped
 	current_music = music
@@ -36,6 +42,12 @@ func play_music(music: AudioStreamMP3, volume = 0, looped = true) -> AudioStream
 	music_manager.volume_db = volume
 	music_manager.play()
 	return music_manager
+
+func stop_music():
+	music_manager.stop()
+	current_music = null
+	pass
+
 
 #SFX Bus
 #Plays an mp3 file
