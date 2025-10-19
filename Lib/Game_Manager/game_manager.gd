@@ -16,6 +16,8 @@ class_name Game_Manager
 @onready var credits_menu
 @onready var game
 
+var subviewport_shader : Node
+
 #@onready var current_menu = $Transitions/Splash
 
 @onready var Menu_Scenes: Dictionary = {

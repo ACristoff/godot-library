@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dooxj1vafmfs3"]
+
+[ext_resource type="Shader" uid="uid://d2p6qqfvfm2w0" path="res://World/subpixel.gdshader" id="1_cwkwy"]
+[ext_resource type="PackedScene" uid="uid://cnghdv3ps40w3" path="res://World/test_world.tscn" id="1_qf6be"]
+[ext_resource type="Script" uid="uid://di0j3b08vamk7" path="res://Assets/Test/camera_centering.gd" id="3_cwkwy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d55jh"]
+shader = ExtResource("1_cwkwy")
+shader_parameter/cam_offset = Vector2(0, 0)
+
+[node name="Main" type="Node2D"]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_d55jh")
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 639.0
+offset_bottom = 339.0
+scale = Vector2(3, 3)
+script = ExtResource("3_cwkwy")
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(642, 362)
+render_target_update_mode = 4
+
+[node name="TestWorld" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_qf6be")]
+texture_filter = 1

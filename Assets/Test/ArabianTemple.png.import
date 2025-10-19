@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdj6fs2qy30kq"
-path="res://.godot/imported/beretparadelogo.png-443738fa40296e1c5ba7fdbdad5debd3.ctex"
+uid="uid://b40emqyavaiij"
+path="res://.godot/imported/ArabianTemple.png-80fe5253c9a15b7d0ed86e056bdd9469.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/Menus/Splash_Screen/beretparadelogo.png"
-dest_files=["res://.godot/imported/beretparadelogo.png-443738fa40296e1c5ba7fdbdad5debd3.ctex"]
+source_file="res://Assets/Test/ArabianTemple.png"
+dest_files=["res://.godot/imported/ArabianTemple.png-80fe5253c9a15b7d0ed86e056bdd9469.ctex"]
 
 [params]
 
