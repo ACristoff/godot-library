@@ -7,8 +7,13 @@ Copy the project over, rename it, do what you have to do
 
 # Folder directory:
 We've update the folders from an Assets / Game split to a structure where assets live in the same folder as the node that uses it most. However this demands people think about where they place things.
+
 ## Characters
 Nodes like player character, NPCs, enemies
+
+## Data
+Hosts data like generated data, saves, logs, etc.
+
 ## Lib
 Nodes and hooks, reused through the game or handle very specific tasks
 ### Audio Manager
