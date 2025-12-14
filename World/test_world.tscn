@@ -80,6 +80,7 @@ sources/0 = SubResource("TileSetAtlasSource_rspi7")
 texture_filter = 3
 
 [node name="Camera2D" type="Camera2D" parent="."]
+process_callback = 0
 script = ExtResource("1_ftki0")
 
 [node name="640x360Image" type="Sprite2D" parent="."]
